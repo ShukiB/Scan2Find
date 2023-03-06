@@ -1,12 +1,13 @@
 {
   "name": "scan-2-find",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build",
+    "build": "ng build --prod",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "nswag": "nswag run service.config.nswag"
   },
   "private": true,
   "dependencies": {
