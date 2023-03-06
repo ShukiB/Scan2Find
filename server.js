@@ -9,10 +9,10 @@ const express = require('express');
 const app = express();
 app.use(requireHTTPS);
 
-app.use(express.static('./dist/scan-2-find.json'));
+app.use(express.static('./dist/scan-2-find'));
 
 app.get('/*', function(req, res) {
-  res.sendFile('index.html', {root: 'dist/scan-2-find.json/'});
+  res.sendFile('index.html', {root: 'dist/scan-2-find/'});
 });
 
 app.listen(process.env.PORT || 8080);
