@@ -1,6 +1,43 @@
 <div class="spot-header">
   <span>Scan 2 Find</span>
 </div>
+<div class="spot-title">
+  <span>Your Parking Spot Details:</span>
+</div>
 <div class="spot-details-wrapper">
+  <div class="spot-details-item">
+    <div class="item-key">Floor</div>
+    <div class="item-value">{{ selectedSpot.floor }}</div>
+  </div>
+  <div class="spot-details-item">
+    <div class="item-key">Area</div>
+    <div class="item-value">{{ selectedSpot.area }}</div>
+  </div>
+  <div class="spot-details-item">
+    <div class="item-key">Row</div>
+    <div class="item-value">{{ selectedSpot.row }}</div>
+  </div>
+  <div class="spot-details-item">
+    <div class="item-key">Description</div>
+    <div class="item-value">{{ selectedSpot.description }}</div>
+  </div>
+</div>
 
+<div class="spot-advertisement">
+  Advertisement-Alt
+</div>
+
+<div class="spot-actions">
+  <div class="spot-action share" (click)="onShareClick()">
+    <img src="https://www.svgrepo.com/show/106657/share.svg" height="15" width="15">
+    Share
+  </div>
+  <div class="spot-action download" (click)="onDownloadClick()">
+    <img src="https://www.svgrepo.com/show/138917/download.svg" height="15" width="15">
+    Download
+  </div>
+</div>
+
+<div class="spot-footer">
+  Powered By TIBA
 </div>
