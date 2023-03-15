@@ -1,8 +1,9 @@
 import { ChangeDetectionStrategy, Component, OnInit } from "@angular/core";
 import { DomSanitizer, SafeUrl } from "@angular/platform-browser";
 import { ActivatedRoute } from "@angular/router";
-import { SpotDto } from "src/shared/entities/spot-dto";
 import * as html2pdf from 'html2pdf.js';
+import { SpotDto } from "src/shared/entities/spot-dto";
+import { findSpotById } from "src/shared/mock/spots";
 
 @Component({
   selector: 's2f-spot',
@@ -16,7 +17,6 @@ export class SpotComponent implements OnInit {
   url: SafeUrl;
 
   constructor(private activeRoute: ActivatedRoute, private domSanitizer: DomSanitizer) {
-    this.loadMockData();
   }
 
   ngOnInit(): void {
@@ -26,13 +26,7 @@ export class SpotComponent implements OnInit {
   }
 
   loadSelectedSpot(spotId: number) {
-    const spotDto = new SpotDto();
-    spotDto.id = spotId;
-    spotDto.floor = -1;
-    spotDto.area = 'Blue';
-    spotDto.row = 2;
-    spotDto.description = "Under The sea Under The sea Under The sea Under The sea Under The sea Under The sea Under Thesea Under The sea Under The sea Under The sea Under The sea Under The sea Under The sea ";
-    spotDto.facilityName = "Bikini Bottom"
+    const spotDto: SpotDto = findSpotById(spotId);
     this.selectedSpot = spotDto;
   }
 
@@ -52,9 +46,5 @@ export class SpotComponent implements OnInit {
 
     const spotElement = document.getElementById('s2f-spot');
     html2pdf().from(spotElement).set(pdfOptions).save();
-  }
-
-  loadMockData() {
-
   }
 }
