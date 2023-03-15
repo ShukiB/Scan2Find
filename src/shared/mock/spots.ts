@@ -13,7 +13,7 @@ const MockSpots: SpotDto[] = [{
   parkNumber: 12,
   description: "From the elevator turn left, go through the door and turn left and immediately left, go 10 meters see color green and turn right go to 12 spot",
   gps: [32.063554, 34.761499],
-  facilityName: "Magic Park",
+  facilityName: "Bikini Bottom",
 },
 {
   id: 124,
@@ -24,7 +24,7 @@ const MockSpots: SpotDto[] = [{
   parkNumber: 22,
   description: "From the elevator turn left, go through the door and turn left- see color red, go to 22 spot",
   gps: [32.063554, 34.798569],
-  facilityName: "Magic Park",
+  facilityName: "Bikini Bottom",
 
 },
 {
@@ -36,7 +36,7 @@ const MockSpots: SpotDto[] = [{
   parkNumber: 53,
   description: "From the elevator turn left, go through the door and turn left, turn right for 20 meters, turn left go to the blue area and see spot 53",
   gps: [32.063549, 34.761409],
-  facilityName: "Magic Park",
+  facilityName: "Bikini Bottom",
 
 },
 {
@@ -48,7 +48,7 @@ const MockSpots: SpotDto[] = [{
   parkNumber: 70,
   description: "From the elevator turn left, go through the door and turn left, turn right see yellow find spot 70",
   gps: [32.063502, 34.761393],
-  facilityName: "Magic Park",
+  facilityName: "Bikini Bottom",
 
 },
 {
@@ -60,5 +60,5 @@ const MockSpots: SpotDto[] = [{
   parkNumber: 90,
   description: "From the elevator turn left, \ngo through the door and turn left, see pink find spot 90",
   gps: [32.063502, 34.765693],
-  facilityName: "Magic Park",
+  facilityName: "Bikini Bottom",
 }]

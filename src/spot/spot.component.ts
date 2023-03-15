@@ -15,6 +15,16 @@ export class SpotComponent implements OnInit {
 
   selectedSpot: SpotDto;
   url: SafeUrl;
+  imageCounter: number = 0;
+  adImageUrl: string;
+
+  images = [
+    { img: "../assets/ads/castro.png" },
+    { img: "../assets/ads/nike.png" },
+    { img: "../assets/ads/zara.png" },
+    { img: "../assets/ads/diesel.png" },
+    { img: "../assets/ads/golda.png" },
+  ];
 
   constructor(private activeRoute: ActivatedRoute, private domSanitizer: DomSanitizer) {
   }
@@ -23,6 +33,11 @@ export class SpotComponent implements OnInit {
     const spotId = ''+this.activeRoute.snapshot.paramMap.get('spotId');
     this.loadSelectedSpot(+spotId);
     this.url = this.domSanitizer.bypassSecurityTrustUrl(`whatsapp://send?text=Your can find your spot here: https://scan-2-find.herokuapp.com/spot/${spotId}`)
+
+    this.rotateImage();
+    setInterval(() => {
+      this.rotateImage();
+    }, 3000);
   }
 
   loadSelectedSpot(spotId: number) {
@@ -41,5 +56,14 @@ export class SpotComponent implements OnInit {
 
     const spotElement = document.getElementById('s2f-spot');
     html2pdf().from(spotElement).set(pdfOptions).save();
+  }
+
+  rotateImage() {
+    this.adImageUrl = this.images[this.imageCounter].img;
+    this.imageCounter++;
+
+    if (this.imageCounter >= this.images.length) {
+      this.imageCounter = 0;
+    }
   }
 }

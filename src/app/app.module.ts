@@ -14,7 +14,6 @@ import { AppComponent } from './app.component';
     CommonModule,
     BrowserModule,
     AppRoutingModule,
-    SharedMaterialComponentsModule,
   ],
   exports: [
     CommonModule,
