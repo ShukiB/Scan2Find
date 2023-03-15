@@ -4,61 +4,77 @@
     <span>Scan 2 Find - </span>
     <span class="spot-facility-name">{{ selectedSpot.facilityName }}</span>
   </div>
-  <div class="spot-title">
-    <span>Your Parking Spot Details:</span>
-  </div>
-  <div class="spot-details-wrapper">
-    <div class="spot-details-item">
-      <div class="item-key">
-        <span>Floor</span>
-      </div>
-      <div class="item-value">
-        <span>{{ selectedSpot.floor }}</span>
-      </div>
-    </div>
-    <div class="spot-details-item">
-      <div class="item-key">
-        <span>Area</span>
-      </div>
-      <div class="item-value">
-        <span>{{ selectedSpot.area }}</span>
-        <span [style.background]="selectedSpot.areaColor" [class.area-color]="selectedSpot.areaColor"></span>
-      </div>
-    </div>
-    <div class="spot-details-item">
-      <div class="item-key">
-        <span>Row</span>
-      </div>
-      <div class="item-value">
-        <span>{{ selectedSpot.row }}</span>
-      </div>
-    </div>
-    <div class="spot-details-item">
-      <div class="item-key">Description</div>
-      <div class="item-value">{{ selectedSpot.description }}</div>
-    </div>
-  </div>
 
-  <div class="spot-advertisement">
-    <img [src]="adImageUrl" height="80" width="350">
-  </div>
+  <div class="wrapper">
+    <div class="spot-title">
+      <span>Your Parking Spot Details:</span>
+    </div>
 
-  <div class="spot-footer">
-    <img src="../assets/icons/Tiba Logo.svg" height="25" width="80">
+    <div class="spot-details-wrapper">
+      <div class="spot-details-item">
+        <div class="item-key">
+          <span>Floor</span>
+        </div>
+        <div class="item-value">
+          <span>{{ selectedSpot.floor }}</span>
+        </div>
+      </div>
+      <div class="spot-details-item">
+        <div class="item-key">
+          <span>Area</span>
+        </div>
+        <div class="item-value">
+          <span>{{ selectedSpot.area }}</span>
+          <span [style.background]="selectedSpot.areaColor" [class.area-color]="selectedSpot.areaColor"></span>
+        </div>
+      </div>
+      <div class="spot-details-item">
+        <div class="item-key">
+          <span>Row</span>
+        </div>
+        <div class="item-value">
+          <span>{{ selectedSpot.row }}</span>
+        </div>
+      </div>
+      <div class="spot-details-item">
+        <div class="item-key">Description</div>
+        <div class="item-value">{{ selectedSpot.description }}</div>
+      </div>
+      <div class="spot-details-item" (click)="onNavigateClick()">
+        <img src="../assets/icons/GoogleMaps.svg" height="15" width="15">
+        Navigate to Parking Lot
+      </div>
+    </div>
+
+    <div class="spot-advertisement">
+      <img [src]="adImageUrl" height="80" width="350">
+    </div>
+
+    <div class="spot-actions" *ngIf="!isDownloading">
+      <a class="spot-action share" [href]="url"
+        data-action="share/whatsapp/share" target="_blank">
+        <img src="../assets/icons/Whatspapp.svg" height="15" width="15">
+        Share
+      </a>
+      <div class="spot-action download" (click)="onDownloadClick()">
+        <img src="../assets/icons/Download.svg" height="15" width="15">
+        Download
+      </div>
+      <!-- <div class="spot-action download" (click)="onNavigateClick()">
+        <img src="../assets/icons/GoogleMaps.svg" height="15" width="15">
+        Navigate
+      </div> -->
+      <div class="spot-action">
+        Pay
+      </div>
+    </div>
+
+    <div class="spot-footer">
+      <img src="../assets/icons/Tiba Logo.svg" height="25" width="80">
+    </div>
   </div>
 </div>
 
-<div class="spot-actions">
-  <a class="spot-action share" [href]="url"
-    data-action="share/whatsapp/share" target="_blank">
-    <img src="../assets/icons/Whatspapp.svg" height="15" width="15">
-    Share
-  </a>
-  <div class="spot-action download" (click)="onDownloadClick()">
-    <img src="../assets/icons/Download.svg" height="15" width="15">
-    Download
-  </div>
-</div>
 
 
 

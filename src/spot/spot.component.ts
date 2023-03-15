@@ -17,6 +17,7 @@ export class SpotComponent implements OnInit {
   url: SafeUrl;
   imageCounter: number = 0;
   adImageUrl: string;
+  isDownloading: boolean = false;
 
   images = [
     { img: "../assets/ads/castro.png" },
@@ -46,6 +47,8 @@ export class SpotComponent implements OnInit {
   }
 
   onDownloadClick() {
+    this.isDownloading = true;
+
     const pdfOptions = {
       margin: 0,
       filename: 'Sacn2Find.pdf',
@@ -56,6 +59,15 @@ export class SpotComponent implements OnInit {
 
     const spotElement = document.getElementById('s2f-spot');
     html2pdf().from(spotElement).set(pdfOptions).save();
+
+    setTimeout(() => {
+      this.isDownloading = false;
+    })
+  }
+
+  onNavigateClick() {
+    const mapsUrl = `https://www.google.com/maps/search/@${this.selectedSpot.gps[0]},${this.selectedSpot.gps[1]},18z`;
+    window.open(mapsUrl, '_blank', 'noreferrer');
   }
 
   rotateImage() {

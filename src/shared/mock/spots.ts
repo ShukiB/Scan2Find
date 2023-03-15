@@ -12,7 +12,7 @@ const MockSpots: SpotDto[] = [{
   row: 2,
   parkNumber: 12,
   description: "From the elevator turn left, go through the door and turn left and immediately left, go 10 meters see color green and turn right go to 12 spot",
-  gps: [32.063554, 34.761499],
+  gps: [32.0635751,34.7612596],
   facilityName: "Bikini Bottom",
 },
 {
@@ -52,7 +52,7 @@ const MockSpots: SpotDto[] = [{
 
 },
 {
-  id: 127,
+  id: 130,
   floor: -2,
   area: "Pink",
   areaColor: "#FFC0CB",

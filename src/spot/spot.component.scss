@@ -20,9 +20,13 @@
   }
 }
 
+// .wrapper {
+//   background-image: url("/assets/icons/Backgrond.png");
+//   opacity: 0.1;
+// }
+
 .spot-title {
   display: flex;
-  // font-family: 'Open Sans', sans-serif;
   font-weight: bold;
   font-size: 15px;
   color: #2c3e50;
@@ -47,7 +51,6 @@
     .item-key {
       display: flex;
       align-self: flex-start;
-      // font-family: 'Quicksand', sans-serif;
       width: 100px;
       font-weight: 600;
 
@@ -59,7 +62,6 @@
     .item-value {
       display: flex;
       flex: 1;
-      // font-family: 'Open Sans', sans-serif;
     }
 
     .area-color {
@@ -72,6 +74,10 @@
       box-sizing: border-box;
       margin-left: 10px;
     }
+
+    img {
+      margin-right: 5px;
+    }
   }
 }
 
@@ -81,7 +87,6 @@
   margin: 20px;
   margin-top: 30px;
   height: 80px;
-
 }
 
 .spot-actions {
@@ -97,10 +102,9 @@
     border: 1px solid #dee2e6;
     border-radius: 5px;
     padding: 5px 10px;
-    min-width: 75px;
+    min-width: 40px;
     justify-content: center;
     cursor: pointer;
-    // font-family: 'Quicksand', sans-serif;
     font-size: 13px;
     font-weight: 600;
     color: #2c3e50;
@@ -120,7 +124,6 @@
 
 .spot-footer {
   display: flex;
-  // font-family: 'Quicksand', sans-serif;
   color: #2c3e50;
   font-weight: 600;
   font-size: 13px;
