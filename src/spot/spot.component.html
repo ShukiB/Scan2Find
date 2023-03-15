@@ -28,22 +28,20 @@
 </div>
 
 <div class="spot-actions">
-  <div class="spot-action share" (click)="onShareClick()">
+  <a class="spot-action share" [href]="url"
+    data-action="share/whatsapp/share" target="_blank">
     <img src="https://cdn-icons-png.flaticon.com/512/160/160200.png" height="15" width="15">
     Share
-  </div>
+  </a>
   <div class="spot-action download" (click)="onDownloadClick()">
     <img src="https://www.svgrepo.com/show/138917/download.svg" height="15" width="15">
     Download
   </div>
-  <a class="spot-action share" href="whatsapp://send?text=This is WhatsApp sharing example using link"
-    data-action="share/whatsapp/share"
-    target="_blank">
-    <img src="https://cdn-icons-png.flaticon.com/512/160/160200.png" height="15" width="15">
-    Share to WhatsApp
-  </a>
 </div>
 
+
 <div class="spot-footer">
-  Powered By TIBA
+  Powered By
+  <img src="https://spark-cloud.tibaparking.net/tiba-logo.f59e743141075e4b0f6f.svg" height="25" width="100">
+  2023
 </div>

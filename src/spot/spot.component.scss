@@ -85,12 +85,17 @@
     font-family: 'Quicksand', sans-serif;
     font-size: 13px;
     font-weight: 600;
+    color: #2c3e50;
 
     img {
       margin-right: 10px;
     }
     &:hover {
       background-color: #ecedf0;
+    }
+
+    &.share {
+      text-decoration: none;
     }
   }
 }
