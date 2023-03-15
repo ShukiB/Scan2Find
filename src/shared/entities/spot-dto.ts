@@ -7,4 +7,5 @@ export class SpotDto {
   parkNumber: number;
   gps: number[];
   description: string;
+  facilityName: string;
 }

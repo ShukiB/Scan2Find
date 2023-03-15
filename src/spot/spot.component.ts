@@ -2,7 +2,7 @@ import { ChangeDetectionStrategy, Component, OnInit } from "@angular/core";
 import { DomSanitizer, SafeUrl } from "@angular/platform-browser";
 import { ActivatedRoute } from "@angular/router";
 import { SpotDto } from "src/shared/entities/spot-dto";
-// import * as html2pdf from 'html2pdf.js';
+import * as html2pdf from 'html2pdf.js';
 
 @Component({
   selector: 's2f-spot',
@@ -32,7 +32,7 @@ export class SpotComponent implements OnInit {
     spotDto.area = 'Blue';
     spotDto.row = 2;
     spotDto.description = "Under The sea Under The sea Under The sea Under The sea Under The sea Under The sea Under Thesea Under The sea Under The sea Under The sea Under The sea Under The sea Under The sea ";
-
+    spotDto.facilityName = "Bikini Bottom"
     this.selectedSpot = spotDto;
   }
 
@@ -50,7 +50,7 @@ export class SpotComponent implements OnInit {
       jsPDF: { unit: 'mm', format: [90, 170] }
     };
 
-    // const spotElement = document.getElementById('s2f-spot');
-    // html2pdf().from(spotElement).set(pdfOptions).save();
+    const spotElement = document.getElementById('s2f-spot');
+    html2pdf().from(spotElement).set(pdfOptions).save();
   }
 }

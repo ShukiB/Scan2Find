@@ -18,7 +18,10 @@
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
             "allowedCommonJsDependencies": [
-
+              "raf",
+              "core-js",
+              "rgbcolor",
+              "html2pdf.js"
             ],
             "outputPath": "dist/scan-2-find",
             "index": "src/index.html",
