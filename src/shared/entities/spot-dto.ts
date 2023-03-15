@@ -5,5 +5,6 @@ export class SpotDto {
   areaColor: string;
   row: number;
   parkNumber: number;
+  gps: number[];
   description: string;
 }
