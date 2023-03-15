@@ -29,13 +29,15 @@
 
 <div class="spot-actions">
   <div class="spot-action share" (click)="onShareClick()">
-    <img src="https://www.svgrepo.com/show/106657/share.svg" height="15" width="15">
+    <img src="https://cdn-icons-png.flaticon.com/512/160/160200.png" height="15" width="15">
     Share
   </div>
   <div class="spot-action download" (click)="onDownloadClick()">
     <img src="https://www.svgrepo.com/show/138917/download.svg" height="15" width="15">
     Download
   </div>
+  <a href="whatsapp://send?text=This is WhatsApp sharing example using link"       data-action="share/whatsapp/share"
+        target="_blank"> Share to WhatsApp </a>
 </div>
 
 <div class="spot-footer">

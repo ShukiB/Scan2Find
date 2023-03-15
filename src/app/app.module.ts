@@ -1,5 +1,7 @@
+import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { SharedMaterialComponentsModule } from 'src/shared/material/shared-material-components.module';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -9,8 +11,14 @@ import { AppComponent } from './app.component';
     AppComponent
   ],
   imports: [
+    CommonModule,
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    SharedMaterialComponentsModule,
+  ],
+  exports: [
+    CommonModule,
+    SharedMaterialComponentsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
