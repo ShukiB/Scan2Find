@@ -1,8 +1,8 @@
 .spot-header {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
-  height: 40px;
+  height: 90px;
   background-color: #0985EB;
   font-weight: 600;
   font-family: 'Quicksand', sans-serif;
@@ -15,20 +15,28 @@
     margin-right: 5px;
   }
 
+  .title {
+    font-size: 30px;
+  }
   .spot-facility-name {
+    font-size: 18px;
     margin-left: 5px;
   }
 }
 
-// .wrapper {
-//   background-image: url("/assets/icons/Backgrond.png");
-//   opacity: 0.1;
-// }
+.background-image {
+  background-image: url("/assets/icons/Backgrond.png");
+  background-repeat: no-repeat;
+  // position: absolute;
+
+  // opacity: 0.1;
+}
 
 .spot-title {
   display: flex;
+  justify-content: center;
   font-weight: bold;
-  font-size: 15px;
+  font-size: 20px;
   color: #2c3e50;
   margin: 5px 20px 15px 20px;
   margin-top: 30px;
@@ -45,7 +53,7 @@
     display: flex;
     align-items: center;
     font-size: 15px;
-    margin-bottom: 5px;
+    margin-bottom: 10px;
     color: #2c3e50;
 
     .item-key {
@@ -68,9 +76,8 @@
       display: flex;
       align-items: center;
       height: 20px;
-      width: 50px;
+      width: 20px;
       border: 1px solid #dee2e6;
-      border-radius: 8px;
       box-sizing: border-box;
       margin-left: 10px;
     }
@@ -78,6 +85,21 @@
     img {
       margin-right: 5px;
     }
+  }
+}
+
+.navigate-to {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 15px;
+  margin-bottom: 5px;
+  color: #2c3e50;
+  font-weight: 600;
+  margin-top: 20px;
+
+  img {
+    margin-right: 10px;
   }
 }
 
