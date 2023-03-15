@@ -16,7 +16,7 @@ export class SpotComponent implements OnInit {
   url: SafeUrl;
 
   constructor(private activeRoute: ActivatedRoute, private domSanitizer: DomSanitizer) {
-
+    this.loadMockData();
   }
 
   ngOnInit(): void {
@@ -45,12 +45,16 @@ export class SpotComponent implements OnInit {
     const pdfOptions = {
       margin: 0,
       filename: 'Sacn2Find.pdf',
-      image: { type: 'jpeg', quality: 0.98 },
+      image: { type: 'pdf', quality: 0.98 },
       html2canvas: { scale: 2 },
-      jsPDF: { unit: 'mm', format: [90, 170] }
+      jsPDF: { unit: 'mm', format: [91, 170] }
     };
 
     const spotElement = document.getElementById('s2f-spot');
     html2pdf().from(spotElement).set(pdfOptions).save();
+  }
+
+  loadMockData() {
+
   }
 }
