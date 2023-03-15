@@ -1,0 +1,36 @@
+.spot-header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 40px;
+  background-color: #0985EB;
+  font-weight: 500;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  color: #FFFFFF;
+  padding: 5px 10px;
+}
+
+.spot-details-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: fit-content;
+  margin: 10px;
+  margin-top: 30px;
+  padding: 5px;
+  border: 1px solid black;
+
+  .spot-detail-item {
+    display: flex;
+    flex-direction: row;
+
+    .key {
+      width: 150px;
+    }
+
+    .value {
+      flex: 1;
+    }
+  }
+}
