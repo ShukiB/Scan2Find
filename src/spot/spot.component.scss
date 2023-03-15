@@ -60,8 +60,20 @@
     }
 
     .item-value {
-      font-family: 'Open Sans', sans-serif;
+      display: flex;
       flex: 1;
+      font-family: 'Open Sans', sans-serif;
+    }
+
+    .area-color {
+      display: flex;
+      align-items: center;
+      height: 20px;
+      width: 50px;
+      border: 1px solid #dee2e6;
+      border-radius: 8px;
+      box-sizing: border-box;
+      margin-left: 10px;
     }
   }
 }

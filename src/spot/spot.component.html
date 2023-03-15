@@ -9,16 +9,29 @@
   </div>
   <div class="spot-details-wrapper">
     <div class="spot-details-item">
-      <div class="item-key">Floor</div>
-      <div class="item-value">{{ selectedSpot.floor }}</div>
+      <div class="item-key">
+        <span>Floor</span>
+      </div>
+      <div class="item-value">
+        <span>{{ selectedSpot.floor }}</span>
+      </div>
     </div>
     <div class="spot-details-item">
-      <div class="item-key">Area</div>
-      <div class="item-value">{{ selectedSpot.area }}</div>
+      <div class="item-key">
+        <span>Area</span>
+      </div>
+      <div class="item-value">
+        <span>{{ selectedSpot.area }}</span>
+        <span [style.background]="selectedSpot.areaColor" [class.area-color]="selectedSpot.areaColor"></span>
+      </div>
     </div>
     <div class="spot-details-item">
-      <div class="item-key">Row</div>
-      <div class="item-value">{{ selectedSpot.row }}</div>
+      <div class="item-key">
+        <span>Row</span>
+      </div>
+      <div class="item-value">
+        <span>{{ selectedSpot.row }}</span>
+      </div>
     </div>
     <div class="spot-details-item">
       <div class="item-key">Description</div>

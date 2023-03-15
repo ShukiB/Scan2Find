@@ -7,7 +7,7 @@ export function findSpotById(spotId: number) {
 const MockSpots: SpotDto[] = [{
   id: 123,
   floor: -1,
-  area: "green",
+  area: "Green",
   areaColor: "#00FF00",
   row: 2,
   parkNumber: 12,
@@ -18,7 +18,7 @@ const MockSpots: SpotDto[] = [{
 {
   id: 124,
   floor: -1,
-  area: "red",
+  area: "Red",
   areaColor: "#FF0000",
   row: 3,
   parkNumber: 22,
@@ -30,7 +30,7 @@ const MockSpots: SpotDto[] = [{
 {
   id: 125,
   floor: -1,
-  area: "blue",
+  area: "Blue",
   areaColor: "#0000FF",
   row: 5,
   parkNumber: 53,
@@ -42,7 +42,7 @@ const MockSpots: SpotDto[] = [{
 {
   id: 126,
   floor: -2,
-  area: "yellow",
+  area: "Yellow",
   areaColor: "#FFFF00",
   row: 7,
   parkNumber: 70,
@@ -54,11 +54,11 @@ const MockSpots: SpotDto[] = [{
 {
   id: 127,
   floor: -2,
-  area: "pink",
+  area: "Pink",
   areaColor: "#FFC0CB",
   row: 9,
   parkNumber: 90,
-  description: "From the elevator turn left, go through the door and turn left, see pink find spot 90",
+  description: "From the elevator turn left, \ngo through the door and turn left, see pink find spot 90",
   gps: [32.063502, 34.765693],
   facilityName: "Magic Park",
 }]

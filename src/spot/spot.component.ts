@@ -30,11 +30,6 @@ export class SpotComponent implements OnInit {
     this.selectedSpot = spotDto;
   }
 
-  onShareClick() {
-    const waSpotElement = document.getElementById('wa');
-    waSpotElement?.click();
-  }
-
   onDownloadClick() {
     const pdfOptions = {
       margin: 0,
