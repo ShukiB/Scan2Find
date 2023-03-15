@@ -114,7 +114,7 @@
 .spot-actions {
   display: flex;
   flex-direction: row;
-  margin: 30px 20px;
+  margin: 30px 20px 10px 20px;
   justify-content: space-around;
 
   .spot-action {
@@ -146,9 +146,17 @@
 
 .spot-footer {
   display: flex;
-  color: #2c3e50;
-  font-weight: 600;
-  font-size: 13px;
   align-items: center;
   justify-content: center;
+  margin-top: 20px;
+}
+
+.tiba-image {
+  // background-image: url("../assets/icons/BackgroundImage.png");
+  // height: 100px;
+  background-size: contain;
+  // width: 150px;
+  // background-repeat: no-repeat;
+  justify-content: center;
+  display: flex;
 }

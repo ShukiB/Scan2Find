@@ -54,7 +54,7 @@ export class SpotComponent implements OnInit {
       filename: 'Sacn2Find.pdf',
       image: { type: 'pdf', quality: 0.98 },
       html2canvas: { scale: 2 },
-      jsPDF: { unit: 'mm', format: [91, 170] }
+      jsPDF: { unit: 'mm', format: [91, 200] }
     };
 
     const spotElement = document.getElementById('s2f-spot');
